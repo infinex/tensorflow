@@ -276,7 +276,7 @@ assert 2 == d2f(3.)[0].numpy()
 
 # Third order derivative.
 d3f = tfe.gradients_function(lambda x : d2f(x)[0])
-assert 0 == d3f(3.)[0].numpy()
+assert None == d3f(3.)[0]
 ```
 
 These functions can be used to train models. For example, consider the following
